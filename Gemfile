@@ -1,5 +1,24 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec', require: false
+  gem 'guard-bundler'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'faker'
+  gem 'bcrypt'
+  gem 'shoulda-matchers'
+  end
+
+# Database changes for Heroku
+  group :production do
+    gem 'pg'
+    gem 'rails_12factor'
+  end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
